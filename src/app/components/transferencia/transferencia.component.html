@@ -1,0 +1,28 @@
+<app-barra></app-barra>
+<mat-toolbar color="primary">
+    Transferencia Monetaria
+</mat-toolbar>
+
+<main>
+    <mat-card>
+        <mat-form-field class="example-full-width">
+            <mat-label>Mi cuenta</mat-label>
+            <input matInput placeholder="Ex. 45679" (keyup)="onKeyMiCuenta($event)">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>No. cuenta a transferir</mat-label>
+            <input matInput placeholder="Ex. 45679" (keyup)="onKeyCuenta2($event)">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>Monto Q.</mat-label>
+            <input matInput placeholder="Ex. 500" (keyup)="onKeyMonto($event)">
+        </mat-form-field>
+        <button mat-raised-button style="display:block; width: 100%;" color="primary" (click)="passMoney()">
+            Aceptar
+        </button>
+    </mat-card>
+</main>
+
+
+    
+    

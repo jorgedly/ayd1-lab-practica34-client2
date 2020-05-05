@@ -1,0 +1,68 @@
+<app-barra></app-barra>
+<mat-toolbar color="primary">
+    Consultar Saldo
+</mat-toolbar>
+<br>
+
+<main>
+    <mat-card>
+        <mat-form-field class="example-full-width">
+            <mat-label>Saldo de Cuenta</mat-label>
+            <br>
+            <br>
+                <mat-form-field appearance="fill">
+                    <mat-label>Cuenta de origen</mat-label>
+                    <input matInput readonly>{{noCuenta}}
+                </mat-form-field>
+                <br>
+                <mat-form-field appearance="fill">
+                    <mat-label>Saldo Total</mat-label>
+                    <input matInput readonly>{{saldo}}
+                </mat-form-field>
+                <br>
+        </mat-form-field>
+    </mat-card>
+</main>
+
+<div>
+    <label>Débitos</label>
+</div>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">No_de_Operacion</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Descripción</th>
+            <th scope="col">saldo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let status of saldoDeb">
+            <th scope="row">{{ status.id_transaccion }}</th>
+            <td>{{ status.fecha }}</td>
+            <td>Hubo una transferencia a la cuenta {{ status.cuenta_destino }}</td>
+            <td>{{ status.monto }}</td>
+        </tr>
+    </tbody>
+</table>
+<div>
+    <label>Créditos</label>
+</div>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">No_de_Operacion</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Descripción</th>
+            <th scope="col">saldo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let status of saldoCre">
+            <th scope="row">{{ status.id_transaccion }}</th>
+            <td>{{ status.fecha }}</td>
+            <td>Hubo una transferencia de la cuenta {{ status.cuenta_origen }}</td>
+            <td>{{ status.monto }}</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,56 @@
+<div class="fondo">
+    <div class="login-wrap">
+        <div class="login-html">
+            <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+            <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+            
+            <div class="login-form">
+                <div class="sign-in-htm">
+                    <div class="group">
+                        <label for="user" class="label">Email</label>
+                        <input type="email" class="input" (keyup)="onKeyEmailLogin($event)"> 
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Password</label>
+                        <input type="password" class="input" data-type="password" (keyup)="onKeyPassLogin($event)">
+                    </div>
+                    <div class="group">
+                        <input type="submit" class="button" value="Sign In" (click)="login()">
+                    </div>                
+                </div>
+    
+                <div class="sign-up-htm">
+                    <div class="group">
+                        <label for="user" class="label">Nombres</label>
+                        <input type="text" class="input" (keyup)="onKeyNombresRegister($event)">
+                    </div>
+                    <div class="group">
+                        <label for="user" class="label">Apellidos</label>
+                        <input type="text" class="input" (keyup)="onKeyApellidosRegister($event)">
+                    </div>
+                    <div class="group">
+                        <label for="user" class="label">DPI</label>
+                        <input type="number" class="input" (keyup)="onKeyDPIRegister($event)">
+                    </div>
+                    <div class="group">
+                        <label for="user" class="label">No cuenta</label>
+                        <input type="number" class="input" (keyup)="onKeyNoCuentaRegister($event)">
+                    </div>
+                    <div class="group">
+                        <label for="user" class="label">Email</label>
+                        <input type="email" class="input" (keyup)="onKeyEmailRegister($event)">
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Password</label>
+                        <input type="password" class="input" data-type="password" (keyup)="onKeyPasswordRegister($event)">
+                    </div>
+    
+                    <div class="group">
+                        <input type="submit" class="button" value="Sign Up" (click)="register()">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
